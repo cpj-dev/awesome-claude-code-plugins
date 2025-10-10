@@ -59,22 +59,28 @@ Claude Code plugins are custom collections that can include:
 
 ### Quick Start
 
-1. **Add a marketplace**:
+1. **Add this marketplace**:
 ```bash
-/plugin marketplace add anthropics/claude-code
+/plugin marketplace add hekmon8/awesome-claude-code-plugins
 ```
 
-2. **Browse available plugins**:
+2. **Or add other marketplaces**:
+```bash
+/plugin marketplace add anthropics/claude-code
+/plugin marketplace add davila7/claude-code-templates
+```
+
+3. **Browse available plugins**:
 ```bash
 /plugin
 ```
 
-3. **Install a plugin**:
+4. **Install a plugin**:
 ```bash
 /plugin install feature-dev
 ```
 
-4. **Use the plugin**:
+5. **Use the plugin**:
 ```bash
 # Plugin commands are now available
 /feature-spec "Add user authentication"
@@ -83,7 +89,10 @@ Claude Code plugins are custom collections that can include:
 ### Installation Methods
 
 ```bash
-# From GitHub marketplace
+# From this awesome collection
+/plugin marketplace add hekmon8/awesome-claude-code-plugins
+
+# From other GitHub marketplaces
 /plugin marketplace add owner/repo
 
 # From Git repository

@@ -1,0 +1,40 @@
+{
+  "name": "awesome-claude-code-plugins",
+  "owner": {
+    "name": "Awesome Claude Code Plugins Community",
+    "email": "noreply@github.com",
+    "url": "https://github.com/hekmon8"
+  },
+  "metadata": {
+    "description": "A curated collection of awesome Claude Code plugins, marketplaces, tools, and resources",
+    "version": "1.0.0",
+    "homepage": "https://github.com/hekmon8/awesome-claude-code-plugins",
+    "repository": "https://github.com/hekmon8/awesome-claude-code-plugins",
+    "license": "CC0-1.0"
+  },
+  "plugins": [
+    {
+      "name": "featured-collection",
+      "source": "./",
+      "description": "Curated collection of featured Claude Code plugins and tools",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Claude Code Community"
+      },
+      "license": "CC0-1.0",
+      "keywords": [
+        "awesome",
+        "plugins",
+        "claude-code",
+        "collection",
+        "curated"
+      ],
+      "strict": false,
+      "metadata": {
+        "category": "Collection",
+        "featured": true,
+        "type": "marketplace"
+      }
+    }
+  ]
+}

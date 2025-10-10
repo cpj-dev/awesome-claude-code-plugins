@@ -90,6 +90,61 @@ Before adding a plugin, ensure it meets these criteria:
 - ✅ **Quality Plugins**: Contains useful, well-made plugins
 - ✅ **Accessible**: Publicly available (GitHub, GitLab, or public Git)
 - ✅ **Documented**: Clear instructions for usage
+- ✅ **Has marketplace.json**: Contains `.claude-plugin/marketplace.json` configuration
+
+### Creating a Marketplace
+
+To publish your own marketplace:
+
+1. **Create `.claude-plugin/marketplace.json`** in your repository root:
+
+```json
+{
+  "name": "your-marketplace-name",
+  "owner": {
+    "name": "Your Name",
+    "email": "your-email@example.com",
+    "url": "https://github.com/yourusername"
+  },
+  "metadata": {
+    "description": "Marketplace description",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "plugin-name",
+      "source": "./path/to/plugin",
+      "description": "Plugin description",
+      "version": "1.0.0",
+      "author": {"name": "Your Name"},
+      "license": "MIT",
+      "keywords": ["keyword1", "keyword2"],
+      "strict": false
+    }
+  ]
+}
+```
+
+2. **Organize your plugins**:
+```
+your-marketplace/
+├── .claude-plugin/
+│   └── marketplace.json       # Marketplace configuration
+├── plugins/
+│   ├── plugin1/
+│   │   ├── commands/          # Slash commands
+│   │   ├── agents/            # AI agents
+│   │   └── .claude-plugin/
+│   │       └── plugin.json
+│   └── plugin2/
+│       └── ...
+└── README.md
+```
+
+3. **Push to GitHub** and users can add it with:
+```bash
+/plugin marketplace add yourusername/your-marketplace
+```
 
 ### Submission Format
 
