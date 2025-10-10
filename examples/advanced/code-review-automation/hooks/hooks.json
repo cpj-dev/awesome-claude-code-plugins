@@ -1,0 +1,11 @@
+{
+  "hooks": [
+    {
+      "event": "before-commit",
+      "script": "./hooks/scripts/pre-commit-check.sh",
+      "description": "Run linting, type checking, and tests before commit",
+      "approval_required": false,
+      "timeout": 60000
+    }
+  ]
+}

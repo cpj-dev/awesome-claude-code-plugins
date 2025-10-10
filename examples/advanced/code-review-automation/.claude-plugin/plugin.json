@@ -1,0 +1,30 @@
+{
+  "name": "code-review-automation",
+  "version": "2.0.0",
+  "description": "Comprehensive automated code review with hooks and specialized agents",
+  "author": {
+    "name": "Claude Code Community",
+    "email": "community@example.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "code-review",
+    "quality",
+    "automation",
+    "hooks",
+    "security"
+  ],
+  "engines": {
+    "claude-code": ">=1.0.0",
+    "node": ">=18.0.0"
+  },
+  "config": {
+    "strictness": "medium",
+    "autofix": false,
+    "require_tests": true,
+    "security_scan": true,
+    "max_function_length": 50,
+    "required_test_coverage": 80,
+    "style_guide": "airbnb"
+  }
+}
