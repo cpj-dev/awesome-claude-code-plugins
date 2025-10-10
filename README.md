@@ -123,16 +123,6 @@ Claude Code plugins are custom collections that can include:
   - Domain-specific development agents
   - Workflow automation
 
-- **[CCPlugins by Brenner Cruvinel](https://github.com/brennercruvinel/CCPlugins)** - `brennercruvinel/CCPlugins`
-  - 24 professional commands
-  - Enterprise-grade workflows
-  - Optimized for Opus 4 and Sonnet 4
-
-- **[Awesome Claude Code by hesreallyhim](https://github.com/hesreallyhim/awesome-claude-code)**
-  - Curated commands collection
-  - Community workflows
-  - Best practices
-
 ## Featured Plugins
 
 ### Development Tools
