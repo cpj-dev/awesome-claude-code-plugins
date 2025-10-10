@@ -40,23 +40,73 @@ Before adding a plugin, ensure it meets these criteria:
 
 1. **Fork this repository**
 
-2. **Add your plugin** to the appropriate category in `README.md`:
+2. **Add your plugin to the `plugins/` directory**:
+
+```bash
+git clone https://github.com/hekmon8/awesome-claude-code-plugins
+cd awesome-claude-code-plugins
+git checkout -b add-my-plugin
+```
+
+3. **Create your plugin directory**:
+
+```
+plugins/
+├── your-plugin-name/
+│   ├── commands/          # Slash commands (if any)
+│   ├── agents/            # AI agents (if any)
+│   ├── .claude-plugin/
+│   │   └── plugin.json    # Plugin configuration
+│   └── README.md          # Plugin documentation
+```
+
+4. **Update `.claude-plugin/marketplace.json`**:
+
+Add your plugin entry to the `plugins` array:
+
+```json
+{
+  "name": "your-plugin-name",
+  "source": "./plugins/your-plugin-name",
+  "description": "Brief description of your plugin",
+  "version": "1.0.0",
+  "author": {
+    "name": "Your Name",
+    "email": "your-email@example.com"
+  },
+  "license": "MIT",
+  "keywords": ["keyword1", "keyword2"],
+  "strict": false,
+  "metadata": {
+    "category": "Development Tools",
+    "featured": false,
+    "type": "plugin"
+  }
+}
+```
+
+5. **Add your plugin to `README.md`**:
+
+Add an entry in the appropriate category:
 
 ```markdown
 ### Your Category
 
-- **your-plugin-name** (Author/Organization) - Brief description
-  - Repository: `username/repo` or URL
+- **your-plugin-name** - Brief description
+  - Location: `plugins/your-plugin-name`
   - Features: Key capabilities
-  - Install: `/plugin marketplace add username/repo`
+  - Author: Your Name
 ```
 
-3. **Follow the format**:
+6. **Follow the format**:
 ```markdown
-- **plugin-name** (Author) - Concise description (max 100 chars)
+- **plugin-name** - Concise description (max 100 chars)
+  - Location: `plugins/plugin-name`
+  - Features: Key capabilities
+  - Author: Author Name
 ```
 
-4. **Place in correct category**:
+7. **Place in correct category**:
    - Development Tools
    - DevOps & CI/CD
    - Testing & Quality
@@ -65,106 +115,57 @@ Before adding a plugin, ensure it meets these criteria:
    - Security
    - (or suggest a new category)
 
-5. **Submit a Pull Request** with:
+8. **Submit a Pull Request** with:
    - Clear title: "Add [plugin-name] plugin"
    - Description of what the plugin does
-   - Link to documentation/repository
    - Confirmation that you've tested it
+   - Confirmation that you've updated both `marketplace.json` and `README.md`
 
 ### Example Entry
 
-```markdown
-### Development Tools
-
-- **feature-planner** (Acme Corp) - Interactive feature planning with task breakdown
-  - Repository: `acme/feature-planner`
-  - Features: User story analysis, task generation, estimation
-  - Install: `/plugin marketplace add acme/feature-planner`
-```
-
-## Adding a Marketplace
-
-### Marketplace Criteria
-
-- ✅ **Active**: Regular updates and maintenance
-- ✅ **Quality Plugins**: Contains useful, well-made plugins
-- ✅ **Accessible**: Publicly available (GitHub, GitLab, or public Git)
-- ✅ **Documented**: Clear instructions for usage
-- ✅ **Has marketplace.json**: Contains `.claude-plugin/marketplace.json` configuration
-
-### Creating a Marketplace
-
-To publish your own marketplace:
-
-1. **Create `.claude-plugin/marketplace.json`** in your repository root:
-
+#### In `.claude-plugin/marketplace.json`:
 ```json
 {
-  "name": "your-marketplace-name",
-  "owner": {
-    "name": "Your Name",
-    "email": "your-email@example.com",
-    "url": "https://github.com/yourusername"
+  "name": "feature-planner",
+  "source": "./plugins/feature-planner",
+  "description": "Interactive feature planning with task breakdown",
+  "version": "1.0.0",
+  "author": {
+    "name": "Acme Corp",
+    "email": "contact@acmecorp.com"
   },
+  "license": "MIT",
+  "keywords": ["planning", "features", "tasks"],
+  "strict": false,
   "metadata": {
-    "description": "Marketplace description",
-    "version": "1.0.0"
-  },
-  "plugins": [
-    {
-      "name": "plugin-name",
-      "source": "./path/to/plugin",
-      "description": "Plugin description",
-      "version": "1.0.0",
-      "author": {"name": "Your Name"},
-      "license": "MIT",
-      "keywords": ["keyword1", "keyword2"],
-      "strict": false
-    }
-  ]
+    "category": "Development Tools",
+    "featured": false,
+    "type": "plugin"
+  }
 }
 ```
 
-2. **Organize your plugins**:
-```
-your-marketplace/
-├── .claude-plugin/
-│   └── marketplace.json       # Marketplace configuration
-├── plugins/
-│   ├── plugin1/
-│   │   ├── commands/          # Slash commands
-│   │   ├── agents/            # AI agents
-│   │   └── .claude-plugin/
-│   │       └── plugin.json
-│   └── plugin2/
-│       └── ...
-└── README.md
-```
-
-3. **Push to GitHub** and users can add it with:
-```bash
-/plugin marketplace add yourusername/your-marketplace
-```
-
-### Submission Format
-
-Add to the "Plugin Marketplaces" section:
-
+#### In `README.md`:
 ```markdown
-- **[Marketplace Name](URL)** - `installation-command`
-  - Description of marketplace focus
-  - Number of plugins (if known)
-  - Maintained by: Organization/Individual
+### Development Tools
+
+- **feature-planner** - Interactive feature planning with task breakdown
+  - Location: `plugins/feature-planner`
+  - Features: User story analysis, task generation, estimation
+  - Author: Acme Corp
 ```
 
-### Example
+## Note on Plugin Marketplaces
 
-```markdown
-- **[Acme Plugin Marketplace](https://github.com/acme/plugins)** - `acme/plugins`
-  - Enterprise development plugins
-  - 15+ plugins for security, testing, and deployment
-  - Maintained by: Acme Corporation
-```
+**This repository collects individual plugins, not plugin marketplaces.**
+
+If you have created a plugin marketplace (a repository containing multiple plugins), you should:
+
+1. **Submit individual plugins** from your marketplace following the plugin submission process above
+2. **Reference your marketplace** in each plugin's README for context
+3. **Include a link** to your marketplace repository in the plugin description
+
+We focus on cataloging individual plugins to make it easier for users to discover and evaluate specific tools. Plugin marketplace repositories are welcome to list their plugins here individually.
 
 ## Improving Documentation
 
@@ -211,12 +212,17 @@ Found a problem? Please open an issue with:
 
 1. **Fork and Branch**:
 ```bash
+# First, fork the repository on GitHub
+# Then clone your fork
 git clone https://github.com/your-username/awesome-claude-code-plugins
 cd awesome-claude-code-plugins
 git checkout -b add-my-plugin
 ```
 
 2. **Make Changes**:
+   - Add plugin files to `plugins/your-plugin-name/` directory
+   - Update `.claude-plugin/marketplace.json` with plugin entry
+   - Add plugin entry to `README.md` in appropriate category
    - Follow existing formatting
    - Test all links
    - Check spelling and grammar
