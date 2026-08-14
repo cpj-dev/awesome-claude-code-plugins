@@ -123,11 +123,6 @@ Claude Code plugins are custom collections that can include:
   - Domain-specific development agents
   - Workflow automation
 
-- **[dsh-plugin-cc](https://github.com/cpj-dev/dsh-plugin-cc)** - `cpj-dev/dsh-plugin-cc`
-  - Claude Code marketplace bridging to DeepSeek Harness
-  - Code review, adversarial critique, and task delegation
-  - Background runs and resumable multi-turn dsh sessions
-
 ## Featured Plugins
 
 ### Development Tools
@@ -146,8 +141,12 @@ Claude Code plugins are custom collections that can include:
 
 - **test-generator** - Automated test case generation
 - **coverage-analyzer** - Test coverage analysis and improvement
+- **dsh** - Bridge Claude Code to the DeepSeek Harness agent for review, critique, and delegation
+  - Location: `plugins/dsh`
+  - Features: `/dsh:review`, `/dsh:critique`, `/dsh:delegate`, resumable multi-turn sessions
+  - Author: DeepSeek Harness community
+  - Source marketplace: [cpj-dev/dsh-plugin-cc](https://github.com/cpj-dev/dsh-plugin-cc)
 - **qa-automation** - End-to-end quality assurance workflows
-- **[dsh-plugin-cc](https://github.com/cpj-dev/dsh-plugin-cc)** - Bridge Claude Code to the DeepSeek Harness agent for review, critique, and delegation
 
 ### Documentation
 
