@@ -35,6 +35,26 @@
         "featured": true,
         "type": "marketplace"
       }
+    },
+    {
+      "name": "dsh",
+      "source": "./plugins/dsh",
+      "description": "Bridge Claude Code to the DeepSeek Harness agent for review, critique, and delegation",
+      "version": "1.0.0",
+      "author": {
+        "name": "DeepSeek Harness community",
+        "url": "https://github.com/cpj-dev/dsh-plugin-cc"
+      },
+      "homepage": "https://github.com/cpj-dev/dsh-plugin-cc",
+      "repository": "https://github.com/cpj-dev/dsh-plugin-cc",
+      "license": "MIT",
+      "keywords": ["deepseek", "dsh", "code-review", "delegation", "bridge"],
+      "strict": false,
+      "metadata": {
+        "category": "Testing & Quality",
+        "featured": false,
+        "type": "plugin"
+      }
     }
   ]
 }
