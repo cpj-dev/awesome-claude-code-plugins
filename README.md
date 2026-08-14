@@ -39,7 +39,7 @@ Claude Code plugins are custom collections that can include:
 - **🔧 Slash Commands**: Custom shortcuts for frequently-used operations
 - **🤖 Subagents**: Specialized agents for specific development tasks
 - **🔌 MCP Servers**: Connections to tools and data sources via Model Context Protocol
-- **🪝 Hooks**: Automated actions triggered at key workflow points
+- **🪢 Hooks**: Automated actions triggered at key workflow points
 
 ### Key Benefits
 
@@ -123,6 +123,11 @@ Claude Code plugins are custom collections that can include:
   - Domain-specific development agents
   - Workflow automation
 
+- **[dsh-plugin-cc](https://github.com/cpj-dev/dsh-plugin-cc)** - `cpj-dev/dsh-plugin-cc`
+  - Claude Code marketplace bridging to DeepSeek Harness
+  - Code review, adversarial critique, and task delegation
+  - Background runs and resumable multi-turn dsh sessions
+
 ## Featured Plugins
 
 ### Development Tools
@@ -142,6 +147,7 @@ Claude Code plugins are custom collections that can include:
 - **test-generator** - Automated test case generation
 - **coverage-analyzer** - Test coverage analysis and improvement
 - **qa-automation** - End-to-end quality assurance workflows
+- **[dsh-plugin-cc](https://github.com/cpj-dev/dsh-plugin-cc)** - Bridge Claude Code to the DeepSeek Harness agent for review, critique, and delegation
 
 ### Documentation
 
