@@ -39,7 +39,7 @@ Claude Code plugins are custom collections that can include:
 - **🔧 Slash Commands**: Custom shortcuts for frequently-used operations
 - **🤖 Subagents**: Specialized agents for specific development tasks
 - **🔌 MCP Servers**: Connections to tools and data sources via Model Context Protocol
-- **🪢 Hooks**: Automated actions triggered at key workflow points
+- **🪝 Hooks**: Automated actions triggered at key workflow points
 
 ### Key Benefits
 
