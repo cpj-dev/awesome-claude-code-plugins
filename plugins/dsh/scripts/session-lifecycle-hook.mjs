@@ -25,7 +25,7 @@ function readHookInput() {
 }
 
 function shellEscape(value) {
-  return `'${String(value).replace(/'/g, `'\\''`)}'`;
+  return `'${String(value).replace(/'/g, `'\''`)}'`;
 }
 
 function appendEnvVar(name, value) {
@@ -60,6 +60,8 @@ async function cleanupSessionJobs(cwd, sessionId) {
         // Lock contention; treat as a lost claim below.
       }
       if (!claimed) {
+        // Another writer finished the job first — its pids may already be
+        // reused by unrelated processes, so they must not be signalled.
         continue;
       }
       for (const pid of resolveJobKillTargets(job)) {
